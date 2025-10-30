@@ -1,0 +1,6 @@
+@AutoServicesBack_HostAddress = http://localhost:5083
+
+GET {{AutoServicesBack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
