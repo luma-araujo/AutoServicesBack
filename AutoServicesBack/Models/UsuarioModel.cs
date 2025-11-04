@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace AutoServicesBack.Models
 {
@@ -11,12 +12,15 @@ namespace AutoServicesBack.Models
 
         [DisplayName("Nome de Usuário")]
         public string? Nome { get; set; }
+        [Required]
 
         [DisplayName("Tipo de Usuário")]
         public string? Tipo { get; set; }
+        [Required]
 
         [DisplayName("Telefone")]
         public string? Telefone { get; set; }
+        [Required]
 
         [DisplayName("Email")]  
         public string? Email { get; set; }

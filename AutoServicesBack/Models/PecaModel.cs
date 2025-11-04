@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace AutoServicesBack.Models
 {
@@ -11,6 +12,7 @@ namespace AutoServicesBack.Models
 
         [DisplayName("Nome")]
         public string? Nome { get; set; }
+        [Required]
 
         [DisplayName("Preço Unitário")]
         public decimal PrecoUnitario { get; set; }

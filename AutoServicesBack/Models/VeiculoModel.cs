@@ -9,21 +9,26 @@ namespace AutoServicesBack.Models
 
         [DisplayName("ID Veículo")]
         public int Id { get; set; }
+        [Required]
 
         [DisplayName("Modelo")]
         public string? Modelo { get; set; }
+        [Required]
 
         [DisplayName("Marca")]
         public string? Marca { get; set; }
+        [Required]
 
         [DisplayName("Ano")]
         public int Ano { get; set; }
 
         [DisplayName("Placa")]
         public string? Placa { get; set; }
+        [Required]
 
         [DisplayName("ID Cliente")]
         public int IdCliente { get; set; }
+        [Required]
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }

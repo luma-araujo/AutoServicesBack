@@ -10,9 +10,11 @@ namespace AutoServicesBack.Models
 
         [DisplayName("ID Pagamento")]
         public int Id { get; set; }
+        [Required]
 
         [DisplayName("ID Ordem de Serviço")]
         public int IdOrdemServico { get; set; }
+        [Required]
 
         [DisplayName("Valor Total")]
         public decimal ValorTotal { get; set; }

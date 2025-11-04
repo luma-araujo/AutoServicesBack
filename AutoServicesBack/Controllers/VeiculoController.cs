@@ -65,6 +65,10 @@ namespace AutoServicesBack.Controllers
 
         }
 
+        [HttpPut]
+
+        [HttpDelete]
+
         private readonly ILogger<VeiculoController> _logger;
 
         public VeiculoController(ILogger<VeiculoController> logger)

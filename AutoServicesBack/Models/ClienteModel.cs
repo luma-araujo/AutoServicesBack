@@ -1,5 +1,5 @@
 using System.ComponentModel;
-
+using System.ComponentModel.DataAnnotations;
 namespace AutoServicesBack.Models
 {
     public class Cliente
@@ -8,12 +8,15 @@ namespace AutoServicesBack.Models
 
         [DisplayName("ID")]
         public int IdCliente { get; set; }
+        [Required]
 
         [DisplayName("Nome")]
         public string? Nome { get; set; }
+        [Required]
 
         [DisplayName("Telefone")]
         public string? Telefone { get; set; }
+        [Required]
 
         [DisplayName("Email")]
         public string? Email { get; set; }
