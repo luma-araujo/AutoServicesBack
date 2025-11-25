@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AutoServicesBack.Models
 {
-    public class Ordem_Servico
+    public class OrdemServico
     {
         public string? RequestId { get; set; }
 
         [DisplayName("ID Ordem de Serviço")]
-        public int Id { get; set; }
+        public int IdOS { get; set; }
         [Required]
 
         [DisplayName("ID Cliente")]
@@ -29,11 +29,8 @@ namespace AutoServicesBack.Models
         [DisplayName("Status de Serviço")]
         public string? StatusServico { get; set; }
 
-        [DisplayName("ID Mecânico")]
-        public int? IdMecanico { get; set; }
-
-        [DisplayName("Diagnóstico")]
-        public string? Diagnostico { get; set; }
+        //[DisplayName("ID Mecânico")]
+        //public int? IdMecanico { get; set; }
 
         [DisplayName("Procedimento Realizado")]
         public string? ProcedimentoRealizado { get; set; }

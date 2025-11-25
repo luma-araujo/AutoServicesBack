@@ -8,7 +8,7 @@ namespace AutoServicesBack.Models
         public string? RequestId { get; set; }
 
         [DisplayName("ID Veículo")]
-        public int Id { get; set; }
+        public int IdVeiculo { get; set; }
         [Required]
 
         [DisplayName("Modelo")]

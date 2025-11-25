@@ -9,7 +9,7 @@ namespace AutoServicesBack.Models
         public string? RequestId { get; set; }
 
         [DisplayName("ID Pagamento")]
-        public int Id { get; set; }
+        public int IdPagamento { get; set; }
         [Required]
 
         [DisplayName("ID Ordem de Serviço")]
