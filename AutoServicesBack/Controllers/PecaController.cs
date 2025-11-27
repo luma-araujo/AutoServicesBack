@@ -56,7 +56,7 @@ namespace AutoServicesBack.Controllers
 
             Pecas.Add(novaPeca);
 
-            return CreatedAtAction(nameof(Get), new Peca { IdPeca = novaPeca.IdPeca }, novaPeca); //Retorna a peça criada
+            return CreatedAtAction(nameof(Listar), new Peca { IdPeca = novaPeca.IdPeca }, novaPeca); //Retorna a peça criada
 
         }
 

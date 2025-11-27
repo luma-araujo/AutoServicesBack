@@ -8,7 +8,7 @@ namespace AutoServicesBack.Models
         public string? RequestId { get; set; }
 
         [DisplayName("ID Usuário")]
-        public int Id { get; set; }
+        public int IdUsuario { get; set; }
 
         [DisplayName("Nome de Usuário")]
         public string? Nome { get; set; }

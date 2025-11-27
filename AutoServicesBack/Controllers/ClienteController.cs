@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using AutoServicesBack.Models;
+using System.Collections.Generic;
 
 namespace AutoServicesBack.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ClienteController : ControllerBase
     {
 
@@ -52,8 +53,8 @@ namespace AutoServicesBack.Controllers
         }
 
         //Adiciona cliente
-        [HttpPost("id")]
-        public IActionResult Cadastrar(int id, [FromBody] Cliente novoCliente)
+        [HttpPost]
+        public IActionResult Cadastrar([FromBody] Cliente novoCliente)
         { //Recebe o cliente novo que vem do corpo da requisição no React
 
             //Verificar se o cliente já existe
@@ -92,7 +93,7 @@ namespace AutoServicesBack.Controllers
                 return BadRequest("O corpo da requisição não pode ser vazio.");
             }
 
-            var clienteExistente = Clientes.FirstOrDefault(cliente => cliente.IdCliente == clienteAtualizado.IdCliente);
+            var clienteExistente = Clientes.FirstOrDefault(cliente => cliente.IdCliente == id);
 
             if (clienteExistente == null)
             {

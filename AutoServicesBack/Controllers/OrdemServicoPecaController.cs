@@ -78,9 +78,9 @@ namespace AutoServicesBack.Controllers
 
 
 
-        private readonly ILogger<ClienteController> _logger;
+        private readonly ILogger<OrdemServicoPecaController> _logger;
 
-        public ClienteController(ILogger<ClienteController> logger)
+        public OrdemServicoPecaController(ILogger<OrdemServicoPecaController> logger)
         {
             _logger = logger;
         }

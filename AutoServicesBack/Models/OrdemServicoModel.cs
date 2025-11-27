@@ -29,9 +29,6 @@ namespace AutoServicesBack.Models
         [DisplayName("Status de Serviço")]
         public string? StatusServico { get; set; }
 
-        //[DisplayName("ID Mecânico")]
-        //public int? IdMecanico { get; set; }
-
         [DisplayName("Procedimento Realizado")]
         public string? ProcedimentoRealizado { get; set; }
 

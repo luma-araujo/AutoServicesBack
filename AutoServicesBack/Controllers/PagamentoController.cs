@@ -17,7 +17,7 @@ namespace AutoServicesBack.Controllers
             {
                 IdPagamento = 1,
                 IdOrdemServico = 1,
-                ValorTotal = 250.0,
+                ValorTotal = 250.0M,
                 DataPagamento = DateTime.Today,
                 FormaPagamento = "Cartão de crédito",
                 StatusPagamento = "Pago"
@@ -26,7 +26,7 @@ namespace AutoServicesBack.Controllers
             {
                 IdPagamento = 2,
                 IdOrdemServico = 2,
-                ValorTotal = 300.0,
+                ValorTotal = 300.0M,
                 DataPagamento = DateTime.Today,
                 FormaPagamento = "Cartão de crédito",
                 StatusPagamento = "Pendente"

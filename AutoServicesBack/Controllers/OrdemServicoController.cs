@@ -19,7 +19,6 @@ namespace AutoServicesBack.Controllers
                 DescricaoProblema = "Não liga",
                 DataAbertura = DateTime.Today,
                 StatusServico = "Concluida",
-                IdMecanico = "1",
                 ProcedimentoRealizado = "Troca de bateria",
             },
             new OrdemServico
@@ -30,11 +29,10 @@ namespace AutoServicesBack.Controllers
                 DescricaoProblema = "Não freia",
                 DataAbertura = DateTime.Today,
                 StatusServico = "Aberta",
-                IdMecanico = "2",
                 ProcedimentoRealizado = "Troca de freio",
             },
 
-        }
+        };
 
 
         //Retorna ordens da lista
@@ -59,8 +57,8 @@ namespace AutoServicesBack.Controllers
         }
 
         //Cria ordem
-        [HttpPost("{id}")]
-        public IActionResult Cadastrar(int id, [FromBody] OrdemServico novaOrdem)
+        [HttpPost]
+        public IActionResult Cadastrar([FromBody] OrdemServico novaOrdem)
         { //Recebe a ordem nova que vem do corpo da requisição no React
 
             //Verificar se a ordem já existe
@@ -79,21 +77,19 @@ namespace AutoServicesBack.Controllers
 
             //Adicionar a nova ordem na lista
 
-            OrdemServico.Add(novaOrdem);
+            OrdensDeServico.Add(novaOrdem);
 
-            return CreatedAtAction(nameof(Listar), new OrdemServico { id = novaOrdem.IdOS }, novaOrdem); //Retorna a oredem criada
-
-
+            return CreatedAtAction(nameof(Listar), new OrdemServico { IdOS = novaOrdem.IdOS }, novaOrdem); //Retorna a ordem criada
         }
 
 
 
-        private readonly ILogger<OrdemServicoController> _logger;
+        //private readonly ILogger<OrdemServicoController> _logger;
 
-        public OrdemServicoController(ILogger<OrdemServicoController> logger)
-        {
-            _logger = logger;
-        }
+        //public OrdemServicoController(ILogger<OrdemServicoController> logger)
+        //{
+        //    _logger = logger;
+        //}
 
     }
 }
